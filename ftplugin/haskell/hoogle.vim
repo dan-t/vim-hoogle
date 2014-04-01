@@ -12,7 +12,6 @@ endif
 command! -buffer -nargs=? Hoogle call hoogle#hoogle(<q-args>)
 
 let b:undo_ftplugin .= join(map([
-      \ 'HsimportModule',
-      \ 'HsimportSymbol'
+      \ 'Hoogle',
       \ ], '"delcommand " . v:val'), ' | ')
 let b:undo_ftplugin .= ' | unlet b:did_ftplugin_hoogle'
